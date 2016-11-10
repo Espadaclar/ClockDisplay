@@ -36,11 +36,18 @@ public class ClockDisplay
     /**
      * mt para avanzar un minuto el tiempo fijado.
      */
-    public void avazaMinuto(){
+    public void avanzaMinuto(){
         minutos.increment();
         if(minutos.getValue() == 0){
             horas.increment();
         }
+    }
+    
+    /**
+     * método para devolver la hora en forma de un String de cinco caracteres.
+     */
+    public String getHora(){
+        return horas.getDisplayValue()+ " : " +minutos.getDisplayValue();
     }
 }
 
