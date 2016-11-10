@@ -14,18 +14,33 @@ public class ClockDisplay
     public ClockDisplay()
     {
         horas = new NumberDisplay(23);
-        horas = new NumberDisplay(59);
+        minutos = new NumberDisplay(59);
     }
 
     /**
-     * An example of a method - replace this comment with your own
-     * 
-     * @param  y   a sample parameter for a method
-     * @return     the sum of x and y 
+     * metodo para fijar una hora en el reloj
      */
-    public int sampleMethod(int y)
+    public void fijarHora(int hora2, int minuto2)
     {
-        // put your code here
-        return  y;
+        horas.setValue(hora2);
+        minutos.setValue(minuto2);
+    }
+    
+    /**
+     * metodo para retornar los valores de los atributos.
+     */
+    public String getValor(){
+        return horas.getValue()+ " : " +minutos.getValue();
     }
 }
+
+
+
+
+
+
+
+
+
+
+
