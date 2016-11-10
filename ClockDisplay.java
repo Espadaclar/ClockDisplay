@@ -13,12 +13,12 @@ public class ClockDisplay
      */
     public ClockDisplay()
     {
-        horas = new NumberDisplay(23);
-        minutos = new NumberDisplay(59);
+        horas = new NumberDisplay(24);
+        minutos = new NumberDisplay(60);
     }
 
     /**
-     * metodo para fijar una hora en el reloj
+     * método para fijar una hora en el reloj
      */
     public void fijarHora(int hora2, int minuto2)
     {
@@ -31,6 +31,16 @@ public class ClockDisplay
      */
     public String getValor(){
         return horas.getValue()+ " : " +minutos.getValue();
+    }
+    
+    /**
+     * mt para avanzar un minuto el tiempo fijado.
+     */
+    public void avazaMinuto(){
+        minutos.increment();
+        if(minutos.getValue() == 0){
+            horas.increment();
+        }
     }
 }
 
