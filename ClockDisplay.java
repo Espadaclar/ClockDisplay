@@ -1,22 +1,20 @@
 
 /**
- * Write a description of class ClockDisplay here.
  * 
- * @author (your name) 
- * @version (a version number or a date)
  */
 public class ClockDisplay
 {
-    // instance variables - replace the example below with your own
-    private int x;
+    
+    private NumberDisplay horas;
+    private NumberDisplay minutos;
 
     /**
      * Constructor for objects of class ClockDisplay
      */
     public ClockDisplay()
     {
-        // initialise instance variables
-        x = 0;
+        horas = new NumberDisplay(23);
+        horas = new NumberDisplay(59);
     }
 
     /**
@@ -28,6 +26,6 @@ public class ClockDisplay
     public int sampleMethod(int y)
     {
         // put your code here
-        return x + y;
+        return  y;
     }
 }
